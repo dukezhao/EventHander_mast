@@ -1,0 +1,2 @@
+include ':app', ':pittevent_lib', ':neteasesamelib', ':myanimationlib'
+rootProject.name='EventHander_mast'
