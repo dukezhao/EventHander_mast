@@ -45,7 +45,7 @@
         </activity>-->
 
 
-        <activity android:name=".AnimationActivity"><!--网易考试1 第2大题-->
+        <activity android:name=".AnimationActivity"><!--网易1.4.1练习，手写动画框架,完成-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

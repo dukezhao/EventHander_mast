@@ -18,7 +18,7 @@ public class MyKeyframeSet {
     //类型估值器,系统的，
     TypeEvaluator mEvaluator;
 
-    //
+    //store keyFrames
     List<MyFloatKeyFrame> mkeyFrames;
 
     public MyKeyframeSet(MyFloatKeyFrame... keyFrame) {//参数是可变数组，
@@ -54,7 +54,7 @@ public class MyKeyframeSet {
     //获取当前百分比对应的具体属性值，需要考虑不同区间（2个关键帧之间），缩小or放大的情况
     public Object getValue(float fraction) {
         MyFloatKeyFrame prevKeyFrame=mkeyFrames.get(0);//首帧
-        for(int i=1;i<mkeyFrames.size();i++)
+        for(int i=0;i<mkeyFrames.size();i++)
         {
            MyFloatKeyFrame nextKeyFrame= mkeyFrames.get(i);//第二帧
             if(fraction<nextKeyFrame.getFraction())
@@ -70,10 +70,6 @@ public class MyKeyframeSet {
                 return mEvaluator==null?
                         prevKeyFrame.getFraction()+intervalFraction*(nextKeyFrame.getValue()-prevKeyFrame.getValue()):
                         ((Number)mEvaluator.evaluate(intervalFraction,prevKeyFrame.getValue(),nextKeyFrame.getValue()));   //如果有估值器
-
-
-
-
 
             }
             prevKeyFrame=nextKeyFrame;

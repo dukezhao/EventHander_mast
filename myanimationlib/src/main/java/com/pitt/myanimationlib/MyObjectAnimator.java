@@ -6,7 +6,7 @@ import java.lang.ref.WeakReference;
 
 /**
  * Author: Z.King.James
- * Declarations:  the objectAnimator customized , call “the little master of workers ；包工头”
+ * Declarations:  the objectAnimator customized , call “the little master of workers ；包工头”<!--网易1.4.1练习，手写动画框架,完成-->
  * Created on: 2019/11/4:10:27
  * Mail:mrzhaoxiaolin@163.com
  */
@@ -103,6 +103,7 @@ public class MyObjectAnimator implements VSYNCManager.AnimationFrameCallback {
     public void start() {
         //交给mFloatPropertyValueHolder改变对应的属性值，iiaogeidoAnimationFrame执行
         mFloatPropertyValueHolder.setupSetter();
+
         VSYNCManager.getInstance().add(this);
     }
 

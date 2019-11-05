@@ -41,7 +41,7 @@ public class MyFloatKeyFrame {
     }
 
     public float getValue() {
-        return 0;
+        return mValue;
     }
 }
 
